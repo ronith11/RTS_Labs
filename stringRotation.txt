@@ -1,0 +1,20 @@
+public class Main {
+
+	public static void main(String args[]) throws Exception {
+		String s = "MyString"; int position = 2, len = s.length();
+		char[] ch = s.toCharArray(), newArr = new char[s.length()];
+
+		for (int i = 0; i < ch.length; i++) {
+			if (len == position) {
+				position = 0;
+			}
+			newArr[position] = ch[i];
+			position++;
+		}
+		StringBuilder ans = new StringBuilder();
+		for (char c : newArr) {
+			ans.append(String.valueOf(c));
+		}
+		System.out.println(ans);
+	}
+}
